@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authenticate - Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1abc9c" />
+  <meta name="description" content="Login or create an account to start tracking expenses." />
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-visual">
+      <h2>Welcome to Expense Tracker</h2>
+      <p>Track every dollar with clarity. Simple, fast, and delightful.</p>
+    </div>
+    <div class="auth-forms">
+      <div class="tab-switch">
+        <button id="tab-login" class="active">Login</button>
+        <button id="tab-signup">Sign Up</button>
+      </div>
+
+      <div id="login-form" class="auth-form active">
+        <form>
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input type="password" id="login-password" placeholder="Password" minlength="6" required />
+          <button type="submit">Login</button>
+        </form>
+        <div class="auth-helper">Forgot your password? Use your sign-up email and password.</div>
+      </div>
+
+      <div id="signup-form" class="auth-form">
+        <form>
+          <input type="text" id="signup-name" placeholder="Full Name" required />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input type="password" id="signup-password" placeholder="Password (min 6 chars)" minlength="6" required />
+          <input type="text" id="signup-phone" placeholder="Phone (optional)" />
+          <input type="number" id="signup-age" placeholder="Age (optional)" min="1" />
+          <select id="signup-currency">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <button type="submit">Create Account</button>
+        </form>
+        <div class="auth-helper">By creating an account, you agree to our terms.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
+
