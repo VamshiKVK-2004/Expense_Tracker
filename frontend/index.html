@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Welcome</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1abc9c">
+    <meta name="description" content="A modern, smart, and beautiful way to manage your finances.">
+</head>
+<body class="landing">
+  <header class="site-header">
+    <div class="brand">💸 Expense Tracker</div>
+    <nav class="header-actions">
+      <a class="ghost-btn" href="auth.html">Login</a>
+      <a class="cta-btn" href="auth.html">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="landing-main">
+    <section class="hero-left">
+      <h1>Control your spending. Grow your savings.</h1>
+      <p class="subtitle">All your expenses, budgets, and insights in one beautiful, fast dashboard.</p>
+      <div class="hero-actions">
+        <a href="auth.html" class="cta-btn large">Start Tracking</a>
+        <a href="#features" class="ghost-btn">See Features</a>
+      </div>
+      <ul class="hero-points">
+        <li>Smart summaries and monthly goals</li>
+        <li>Insights by category and trend</li>
+        <li>Offline-ready with PWA support</li>
+      </ul>
+    </section>
+    <section class="hero-right">
+      <div class="mockup">
+        <div class="mockup-gradient"></div>
+        <div class="mockup-card">
+          <div class="mockup-row">
+            <span>Food</span><span>$24.90</span>
+          </div>
+          <div class="mockup-row">
+            <span>Transport</span><span>$12.40</span>
+          </div>
+          <div class="mockup-row">
+            <span>Shopping</span><span>$89.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="features" class="features">
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Actionable Insights</h3>
+      <p>Visualize your spending by category, month, and trend to make better decisions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Budget Goals</h3>
+      <p>Set monthly targets and get gentle alerts when you’re close to the limit.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">☁️</div>
+      <h3>Works Offline</h3>
+      <p>Add expenses anytime. Your data syncs when you’re back online.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Secure</h3>
+      <p>Private by default. Your data is protected and only accessible to you.</p>
+    </div>
+  </section>
+
+  <footer class="landing-footer">&copy; 2024 Expense Tracker. All rights reserved.</footer>
+
+  <script>
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log('SW registered'))
+        .catch(() => console.log('SW registration failed'));
+    }
+  </script>
+</body>
+</html>
